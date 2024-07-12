@@ -1,10 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Implementing solution file */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  /* 
+    - Using flex: 1 essentially puts the footer at the bottom 
+    - This is because flex-grow makes it take up all the empty space
+    - Uncomment border code to see
+
+  */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid; */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background-color: #eee;
+}
+
+.left-links,
+.right-links {
+  display: flex;
+  gap: 15px;
 }
 
 img {
@@ -16,6 +52,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 18px;
 }
 
 input {
@@ -24,3 +61,92 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(82, 82, 82);
+}
+
+/* Old solution */
+/*
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  min-width: 100%;
+}
+
+.footer {
+  background-color: #eee;
+  display: flex;
+  margin-top: auto;
+  min-width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: auto;
+}
+
+.left-links,
+.right-links {
+  display: flex;
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+  color: #777777;
+}
+*/
